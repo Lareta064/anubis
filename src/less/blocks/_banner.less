@@ -1,6 +1,6 @@
 .banner {
 	position: relative;
-	// height: 500px;
+	padding-bottom: 50px;
 	margin-top: -40px;
 
 	@media(max-width:767px) {
@@ -192,4 +192,52 @@
 			font-size: 1.4em;
 		}
 	}
+}
+
+.more-detailed {
+	position: relative;
+	padding-top: 42px;
+	z-index: 6;
+	background: url(../img/main/blueBg.png);
+	background-position: 0 0;
+	background-size: cover;
+	font-size: 1rem;
+
+	.more-detailed-content {
+		display: flex;
+	}
+
+	.section-img {
+		width: 52%;
+	}
+
+	.section-text {
+		width: 48%;
+	}
+
+	.section-img img {
+		object-fit: cover;
+		max-width: unset;
+	}
+
+	.section-text {
+		max-width: 580px;
+		padding-top: 3%;
+	}
+
+	.section-text h3 {
+		font-size: 2.9em;
+		font-family: 'Framer Sans 100';
+		line-height: 1;
+		margin-bottom: 20px;
+	}
+
+	.section-text p {
+		line-height: 1.6;
+	}
+
+	.page-button {
+		margin-top: 40px;
+	}
+
 }
