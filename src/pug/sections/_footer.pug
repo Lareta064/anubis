@@ -1,0 +1,31 @@
+mixin social-icons(args)
+	.social-icons
+		each item in args
+			a(href=" "+ item.link )
+				i(class="fab fa-"+ item.iconCass)
+
+footer.footer
+	.container
+		.footer-content
+			a(href="index.html").logo
+				img(src="img/logo-footer.png", alt="logo")
+			ul.footer-nav
+				li
+					a(href="#") Обо мне
+				li
+					a(href="#") Спонсоры
+				li
+					a(href="#") Медиа
+					.submenu
+						a(href="#") Фотогалерея
+						a(href="#") Видео
+				li
+					a(href="#") Контакты
+			+social-icons([
+				{link:'#', iconCass:'vk'},
+				{link:'#', iconCass: 'facebook-f'},
+				{link:'#', iconCass: 'youtube'},
+				{link:'#', iconCass: 'instagram'},
+				{link:'#', iconCass: 'twitter'},
+				])
+			.dev-info

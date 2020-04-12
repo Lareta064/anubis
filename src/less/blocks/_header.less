@@ -17,9 +17,13 @@
 		left: -10%;
 		top: -25px;
 
+		@media(max-width:1360px) {
+			left: 0%;
+		}
+
 		@media(max-width:1199px) {
 			max-width: 255px;
-			left: 0%;
+
 			top: -15px;
 		}
 
@@ -53,6 +57,14 @@
 	}
 
 	@media(max-width:767px) {
+		img {
+
+			height: 90px;
+		}
+
+	}
+
+	@media(max-width:424px) {
 		img {
 
 			height: 70px;
@@ -134,7 +146,8 @@
 	}
 }
 
-.header-nav li {
+.header-nav li,
+.footer-nav li {
 	position: relative;
 	margin-right: 1.7em;
 
@@ -147,17 +160,21 @@
 	}
 }
 
-.header-nav li:hover a {
+.header-nav li:hover a,
+
+.footer-nav li:hover a {
 	background-color: #fff;
 	color: @text;
 }
 
-.header-nav li:hover .submenu a:hover {
+.header-nav li:hover .submenu a:hover,
+.footer-nav li:hover .submenu a:hover {
 	background-color: #c3c3c3;
 	transition: .5s;
 }
 
-.header-nav a {
+.header-nav a,
+.footer-nav a {
 
 	padding: 5px;
 	display: block;
@@ -166,11 +183,15 @@
 	color: #fff;
 }
 
-.header-nav a:last-child {
+.header-nav a:last-child,
+.footer-nav a:last-child {
 	margin-right: 0;
 }
 
-.header-nav a:hover {
+
+
+.header-nav a:hover,
+.footer-nav a:hover {
 	background-color: #fff;
 	color: @text;
 	transition: .5s;
@@ -200,7 +221,8 @@
 
 }
 
-.header-nav li:hover .submenu {
+.header-nav li:hover .submenu,
+.footer-nav li:hover .submenu {
 	max-height: 300px;
 }
 
