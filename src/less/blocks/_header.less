@@ -1,11 +1,15 @@
 .header {
 	padding-top: 25px;
 	position: relative;
-	overflow: hidden;
+	// overflow: hidden;
 
-	// background: url(../img/main/headBg.png);
-	// background-position: 0 0;
-	// background-size: cover;
+	background: url(../img/main/headBg.png);
+	background-position: top;
+	background-size: cover;
+	// -webkit-clip-path: polygon(0 0, 100% 0%, 100% 99%, 0 50%);
+	// clip-path: polygon(0 0, 100% 0%, 100% 99%, 0 50%);
+	z-index: 5;
+
 	@media(max-width:991px) {
 		padding-top: 15px;
 	}
@@ -216,9 +220,7 @@
 		margin-left: 20px;
 		left: auto;
 		transform: translateY(0%);
-
 	}
-
 }
 
 .header-nav li:hover .submenu,

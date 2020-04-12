@@ -15,17 +15,21 @@ footer.footer
 				li
 					a(href="#") Спонсоры
 				li
-					a(href="#") Медиа
+					a(href="#!") Медиа
 					.submenu
 						a(href="#") Фотогалерея
 						a(href="#") Видео
 				li
 					a(href="#") Контакты
-			+social-icons([
-				{link:'#', iconCass:'vk'},
-				{link:'#', iconCass: 'facebook-f'},
-				{link:'#', iconCass: 'youtube'},
-				{link:'#', iconCass: 'instagram'},
-				{link:'#', iconCass: 'twitter'},
-				])
+
+			.social-block
+				+social-icons([
+					{link:'#', iconCass:'vk'},
+					{link:'#', iconCass: 'facebook-f'},
+					{link:'#', iconCass: 'youtube'},
+					{link:'#', iconCass: 'instagram'},
+					{link:'#', iconCass: 'twitter'},
+					])
+				a(href="#").sherdod-link  Sherdog.com
+
 			.dev-info
