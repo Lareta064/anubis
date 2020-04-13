@@ -2,14 +2,14 @@
 	position: relative;
 	padding-bottom: 50px;
 	margin-top: -81px;
-	background-image: url(../img/main/banner.png);
+	background-image: url(../img/index/banner.png);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 
 	@media(max-width:1199px) {
 		margin-top: -55px;
-		background-image: none
+
 	}
 
 	@media(max-width:767px) {
@@ -19,17 +19,7 @@
 }
 
 .banner-img {
-	// position: absolute;
-	// top: -80px;
-	// left: 50%;
-	// transform: translateX(-44%);
-	// z-index: 1;
-	// width: 60%;
 	display: none;
-	// @media(max-width:1199px) {
-	// 	top: -3%;
-
-	// }
 
 	@media(max-width:767px) {
 		top: 0%;
@@ -71,8 +61,6 @@
 	@media(max-width:767px) {
 		font-size: 16px;
 	}
-
-	// position: relative;
 }
 
 .banner-info {
@@ -222,99 +210,5 @@
 			display: flex;
 			justify-content: flex-end;
 		}
-	}
-}
-
-.more-detailed {
-	position: relative;
-	padding-top: 42px;
-	z-index: 6;
-	background: url(../img/main/blueBg.png);
-	background-position: 0 0;
-	background-size: cover;
-	font-size: 1rem;
-	margin-top: -75px;
-	overflow: hidden;
-
-	@media(max-width:1199px) {
-		font-size: .8rem;
-		padding-top: 70px;
-		padding-bottom: 70px;
-	}
-
-	// @media(max-width:767px) {
-
-	// }
-
-	.more-detailed-content {
-		display: flex;
-	}
-
-	.section-img {
-		width: 52%;
-
-		@media(max-width:1919px) {
-			transform: translate(-40%, 18px);
-		}
-
-		@media(max-width:1439px) {
-			transform: translate(-65%, 22px);
-		}
-
-		@media(max-width:1199px) {
-
-
-			img {
-				display: none;
-			}
-		}
-
-		@media(max-width:1199px) {
-			width: 0;
-		}
-	}
-
-	.section-img img {
-		object-fit: cover;
-		max-width: unset;
-	}
-
-	.section-text {
-		max-width: 580px;
-		padding-top: 3%;
-		width: 48%;
-
-		@media(max-width:1199px) {
-			width: 100%;
-			margin-left: auto;
-			margin-right: auto;
-			padding-top: 60px;
-		}
-
-		@media(max-width:767px) {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-	}
-
-	.section-text h3 {
-		font-size: 2.9em;
-		font-family: 'Framer Sans 100';
-		line-height: 1;
-		margin-bottom: 20px;
-	}
-
-	.section-text p {
-		line-height: 1.6;
-	}
-
-	.page-button {
-		margin-top: 40px;
-
-		@media(max-width:767px) {
-			margin-left: auto;
-			margin-right: auto;
-		}
-
 	}
 }
