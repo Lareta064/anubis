@@ -1,0 +1,14 @@
+extends ../layouts/layout.pug
+
+block content
+	.blog-wrapper
+		include ../sections/_header.pug
+		include ../sections/_blog-content.pug
+		//- include ../sections/_index-detales.pug
+		include ../sections/_footer.pug
+
+
+
+block variables
+	-var title = "Blog";
+	-var bodyClass = "blog-page";
