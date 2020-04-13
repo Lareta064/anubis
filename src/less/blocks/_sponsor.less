@@ -1,0 +1,152 @@
+.sponsor {
+	color: #fff;
+	padding-bottom: 50px;
+
+	h1,
+	a,
+	p {
+		color: #fff;
+	}
+
+	.section-description {
+		margin-bottom: 70px;
+		max-width: 975px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 0;
+	}
+
+	.spons-card {
+		margin-bottom: 85px;
+	}
+
+	.spons-card:last-child {
+		margin-bottom: 100px;
+	}
+
+
+}
+
+.spons-logo {
+	a {
+		font-size: 16px;
+		line-height: 30px;
+		display: inline-block;
+		padding-top: 5px;
+		padding-left: 3px;
+		padding-right: 3px;
+		border-bottom: 1px solid #fff;
+		transition: 5s;
+
+		&:hover {
+			opacity: .5;
+		}
+	}
+
+	@media(max-width:767px) {
+		display: flex;
+
+		.logo-wrapper {
+			display: none;
+		}
+
+	}
+}
+
+.spons-info {
+	h2 {
+		font-family: 'Framer Sans 600';
+		text-transform: uppercase;
+		margin-bottom: 18px;
+		font-size: 44px;
+
+		@media(max-width:991px) {
+			font-size: 34px;
+		}
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	@media(max-width:767px) {
+		margin-bottom: 20px;
+	}
+
+}
+
+.sp-page .footer {
+	margin-top: -120px;
+	margin-top: 0px;
+	background-image: url(../img/sp-footer.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding-top: 120px;
+	// z-index: 5;
+
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: -5px;
+		height: 70%;
+		right: 0;
+
+		-webkit-clip-path: polygon(0 0, 0 90%, 130% 0);
+		clip-path: polygon(0 0, 0 74%, 160% 0);
+		background-image: url(../img/sp.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+
+	}
+
+
+}
+
+.feedback .form-row {
+	height: 65px;
+	width: 100%;
+	transform: skew(-18deg);
+	background-color: #464646;
+	border: 2px solid #fff;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media(max-width:991px) {
+		margin-bottom: 16px;
+	}
+
+	input {
+		width: 100%;
+		display: inline-block;
+		background-color: #464646;
+		padding-left: 14px;
+		padding-right: 14px;
+		font-style: italic;
+
+		&::placeholder {
+			text-transform: uppercase;
+			font-style: italic;
+		}
+	}
+}
+
+.feedback .page-button {
+	height: 65px;
+	text-transform: uppercase;
+	padding-top: 0px;
+	width: 100%;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.feedback p {
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 30px;
+}

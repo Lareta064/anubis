@@ -1,0 +1,13 @@
+extends ../layouts/layout.pug
+
+block content
+	.spons-wrapper
+		include ../sections/_header.pug
+		include ../sections/_sponsor.pug		
+		include ../sections/_footer.pug
+
+
+
+block variables
+	-var title = " Спонсорам";
+	-var bodyClass = "sp-page";
