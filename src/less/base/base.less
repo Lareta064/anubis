@@ -146,9 +146,32 @@ input {
 		font-size: 14px;
 	}
 
-	&:hover {
-		border-bottom: 1px solid @brcrmBorder;
+	&:before {
+		content: '';
+		position: absolute;
+		left: -2px;
+		bottom: -2px;
+		width: 0;
+		height: 1px;
+		background-color: @brcrmBorder;
+		transition: .3s;
 	}
+
+	&:hover:before {
+		width: 110%;
+
+	}
+}
+
+.sp-page .breadcrm a:hover:before,
+.dark-page .breadcrm a:hover:before {
+	border-bottom: 1px solid rgba(255, 255, 255, .7);
+	background-color: rgba(255, 255, 255, .7);
+}
+
+.sp-page .breadcrm a:hover:last-child,
+.dark-page .breadcrm a:hover:last-child {
+	color: #fff
 }
 
 .breadcrm a:last-child {
@@ -160,8 +183,13 @@ input {
 	}
 
 	&:hover {
-		color: unset;
+		color: @brcrm;
 		border-bottom: 0px;
+	}
+
+	&:hover:before {
+		// color: unset;
+		width: 0px;
 	}
 }
 
