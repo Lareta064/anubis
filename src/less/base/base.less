@@ -33,6 +33,16 @@ body {
 
 body.light-page {
 	background-color: #d6d6d6;
+
+	footer.footer {
+		@media(max-width:767px) {
+			padding-top: 50px;
+			background-image: none;
+			background-color: #000;
+			-webkit-clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+			clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+		}
+	}
 }
 
 body.dark-page {
