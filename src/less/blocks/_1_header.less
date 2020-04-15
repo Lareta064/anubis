@@ -19,13 +19,13 @@
 
 	.logo {
 		max-width: 410px;
-		width: auto;
+		// width: auto;
 		position: relative;
 		left: -10%;
 		top: -25px;
 
 		@media(max-width:1360px) {
-			left: 0%;
+			left: -3%;
 		}
 
 		@media(max-width:1199px) {
@@ -38,6 +38,9 @@
 			width: 50%;
 			left: -10px;
 			top: -10px;
+			position: fixed;
+			top: 0;
+			left: 10px;
 
 		}
 	}
@@ -239,4 +242,10 @@
 	color: @text;
 	margin-bottom: 2px;
 	transition: .3s;
+}
+
+@media(max-width:767px) {
+	.header-menu {
+		margin-left: auto;
+	}
 }
