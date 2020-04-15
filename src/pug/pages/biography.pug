@@ -1,0 +1,13 @@
+extends ../layouts/layout.pug
+
+block content
+	.bio-wrapper
+		include ../sections/_header.pug
+		include ../sections/_bio.pug		
+		include ../sections/_footer.pug
+
+
+
+block variables
+	-var title = " Биография";
+	-var bodyClass = "dark-page";

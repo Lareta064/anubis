@@ -47,6 +47,10 @@ body.light-page {
 
 body.dark-page {
 	background-color: @bodyBg;
+
+	h1 {
+		color: #fff;
+	}
 }
 
 body.sp-page {
@@ -98,7 +102,7 @@ input {
 
 .section-title {
 	text-align: center;
-	margin-bottom: 28px;
+	margin-bottom: 30px;
 }
 
 .section-title h1 {
@@ -155,12 +159,34 @@ input {
 		height: 1px;
 		background-color: @brcrmBorder;
 		transition: .3s;
+
+	}
+
+	&:hover:before {
+		width: 110%;
+
+
 	}
 
 	&:hover:before {
 		width: 110%;
 
 	}
+}
+
+.dark-page .breadcrm a {
+	color: #fff;
+}
+
+.sp-page .breadcrm a:hover:before,
+.dark-page .breadcrm a:hover:before {
+	border-bottom: 1px solid rgba(255, 255, 255, .7);
+	background-color: rgba(255, 255, 255, .7);
+}
+
+.sp-page .breadcrm a:hover:last-child,
+.dark-page .breadcrm a:hover:last-child {
+	color: #fff
 }
 
 .sp-page .breadcrm a:hover:before,
