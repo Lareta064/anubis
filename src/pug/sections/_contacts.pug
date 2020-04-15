@@ -1,0 +1,61 @@
+mixin breadcrmb(args)
+	nav.breadcrm
+		each item in args
+			a(href= item.link) #{item.title}
+	
+section.contacts
+	.container
+		.section-title
+			h1 Мои контакты
+			+breadcrmb([{link: 'index.html', title: 'Главная'},{link: '#!', title: 'Контакты'} ])
+		.my-contacts
+			.my-contacts-block
+				.row
+					.col-sm-6.col-md-5
+						a(href="tel:+73432883624").contact-item
+							.contact-label
+								span.contact-icon
+									img(src="img/contacts/icon-phone.png", alt="icon")
+								span.contact-name Телефон
+							.contact-val +7 (343) 288 36 24
+					.col-sm-6.col-md-5.col-lg-4.offset-lg-2
+						a(href="mailto:anubisway@gmail.com").contact-item
+							.contact-label
+								span.contact-icon
+									img(src="img/contacts/icon-mail.png", alt="icon")
+								span.contact-name Email
+							.contact-val anubisway@gmail.com
+			.contacts-form-block
+				h3 Остались вопросы? Напишите нам:
+				form.feedback-form(action="mail.php" method="POST")
+					.row
+						.col-sm-6.col-xl-6
+							.form-row
+								input(type="text" name="userName" placeholder="Ваше имя*" required)
+							.form-row
+								input(type="text" name="phone" value='*' required)
+							.form-row
+								input(type="text" name="email" placeholder="Ваш email*" required)
+						.col-sm-6.col-xl-6
+							.form-row
+								textarea(name="message" placeholder="Ваше сообщение*" rows="5" required)
+							
+							.form-row.form-row--check
+								label
+									input(type="checkbox" name="check" ) 
+									span Согласен на обработку персональных данных
+						.col-md-4.offset-md-4
+							.form-button
+								input(type="submit" value="отправить")
+		.contacts-text
+			p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius maiores repudiandae fugit nemo corrupti, itaque dolor esse eaque quas, laborum officia ex aspernatur deserunt eum voluptatem veniam? At, culpa ab!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius maiores repudiandae fugit nemo corrupti, itaque dolor esse eaque quas, laborum officia ex aspernatur deserunt eum voluptatem veniam? At, culpa ab!Lorem
+		.comments-block
+			h3 Оставьте комментарии и следите за мной в соцсетях:
+			.row
+				.col-sm-6
+					.vk-comments
+						img(src="img/contacts/comment.jpg", alt="img")
+				.col-sm-6
+					.vk-subscribers
+						img(src="img/contacts/vk-img.jpg", alt="img")
+
