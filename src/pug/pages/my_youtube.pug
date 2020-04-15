@@ -1,0 +1,14 @@
+extends ../layouts/layout.pug
+
+block content
+	.media-wrapper
+		include ../sections/_header.pug
+		include ../sections/_youtube-page.pug		
+		include ../sections/_footer.pug
+
+
+
+block variables
+	-var title = " Мой Youtube";
+	//- -var bodyClass = "video-page";
+	-var bodyClass = "light-page";

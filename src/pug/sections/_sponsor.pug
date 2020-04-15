@@ -1,0 +1,59 @@
+mixin breadcrmb(args)
+	nav.breadcrm
+		each item in args
+			a(href= item.link) #{item.title}
+
+	
+section.sponsor
+	.container
+		.section-title
+			h1 спонсорам
+			+breadcrmb([{link: 'index.html', title: 'Главная'},{link: '#!', title: 'Спонсорам'} ])
+		.sponsors-block
+			.section-description.text-center
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+			
+			.spons-card
+				.row
+					
+					.col-md-8.order-md-last
+						.spons-info
+							h2 Название Спонсора
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure magni ipsa velit blanditiis, facilis saepe animi tempore. Eveniet error, consequatur iste nesciunt fugiat quam iusto repellendus adipisci, necessitatibus provident deleniti?
+					.col-md-4.order-md-first
+						.spons-logo
+							.logo-wrapper
+								img(src="img/sponsor/sponsor1.png", alt="logo")
+							a(href="#") Перейти на сайт
+			.spons-card
+				.row
+					
+					.col-md-8.order-md-last
+						.spons-info
+							h2 ghsdv ce
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure magni ipsa velit blanditiis, facilis saepe animi tempore. Eveniet error, consequatur iste nesciunt fugiat quam iusto repellendus adipisci, necessitatibus provident deleniti?
+					.col-md-4.order-md-first
+						.spons-logo
+							.logo-wrapper
+								img(src="img/sponsor/sponsor2.png", alt="logo")
+							a(href="#") Перейти на сайт
+		.feedback
+			p.text-center Оставьте заявку о спонсорстве и мы свяжемся с Вами:
+			form(action="").contact-form
+				.row
+					.col-md-4.col-lg-3
+						.form-row
+							input(type="text" placeholder="имя")
+					.col-md-4.col-lg-3
+						.form-row
+							input(type="text" placeholder="Телефон")
+					.col-md-4.col-lg-3
+						.form-row
+							input(type="text" placeholder="email")
+					.col-md-4.offset-md-8.col-lg-3.offset-lg-0
+						button.page-button(type="submit")
+							span Отправить
+
+
+
+

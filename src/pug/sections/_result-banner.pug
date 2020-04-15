@@ -1,0 +1,51 @@
+mixin breadcrmb(args)
+	nav.breadcrm
+		each item in args
+			a(href= item.link) #{item.title}
+section.banner.result-banner
+	.container
+		.section-title
+			h1 статистика
+			+breadcrmb([{link: 'index.html', title: 'Главная'},{link: '#!', title: 'Cтатистика'} ])
+		.banner-content
+			.banner-img
+				img(src="img/index/banner.png", alt="banner")
+			.result-info
+				.left-col
+					.col-item.col-name
+						h2 DMITRY 'ANUBIS' KUZNETSOV:
+						p.important 10 - 6
+						p 6 KO/TKO 60%
+						p 4 SUBMISSIONS 40%
+						p 0 DECISIONS 0%
+					.col-item
+						h2 HEIGHT:
+						p 5'8" / 171.5 cm
+					.col-item
+						h2 FIGHT WEIGHT:
+						p 135 lbs / 61.2 kg
+						p 125 lbs / 57 kg
+					.col-item
+						h2 LAST FIGHT:
+						p Zamirbek Uulu Beksultan,
+						p FNG 96 - Fight Nights Global 96, Win
+
+						
+				.right-col
+					.col-item
+						h2 DATE OF BIRTH:
+						p 1994-03-30
+			
+					.col-item
+						h2 BIRTHPLACE:
+						p Moscow Russia
+					.col-item
+						h2 CURRENT LOCATION:
+						p Pushkino Russia
+					.col-item
+						h2 ASSOCIATION:
+						p Goldex Axe Club
+					.col-item
+						h2 CLASS:
+						p Bantamweight, Flyweight
+				

@@ -17,7 +17,9 @@ body {
 	font-weight: normal;
 	font-size: 18px;
 	line-height: normal;
-	background-color: @bodyBg;
+
+
+
 }
 
 .noscroll {
@@ -28,6 +30,37 @@ body {
 .overlay {
 	filter: blur(5px);
 }
+
+body.light-page {
+	background-color: #d6d6d6;
+
+	footer.footer {
+		@media(max-width:767px) {
+			padding-top: 50px;
+			background-image: none;
+			background-color: #000;
+			-webkit-clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+			clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+		}
+	}
+}
+
+body.dark-page {
+	background-color: @bodyBg;
+}
+
+body.sp-page {
+	background-image: url(../img/sp.png);
+	background-repeat: repeat-y;
+	background-position: center;
+	background-size: cover;
+	height: auto;
+}
+
+// body.video-page,
+// body.blog-page {
+// 	background-color: #d6d6d6;
+// }
 
 //font-family: 'Framer Sans 100';
 a,
@@ -63,10 +96,34 @@ input {
 	outline: none;
 }
 
+.section-title {
+	text-align: center;
+	margin-bottom: 28px;
+}
+
+.section-title h1 {
+	text-transform: uppercase;
+	font-size: 72px;
+	font-family: 'Framer Sans 100';
+	line-height: 1;
+	color: #2b2b2b;
+
+	@media(max-width:1199px) {
+		font-size: 64px;
+	}
+
+	@media(max-width:991px) {
+		font-size: 58px;
+	}
+
+	@media(max-width:767px) {
+		font-size: 60px;
+	}
+}
+
 /*хлебные крошки*/
 .breadcrm {
-	display: flex;
-
+	display: inline-flex;
 }
 
 .breadcrm a {
@@ -74,20 +131,47 @@ input {
 	position: relative;
 	padding: 2px;
 	padding-bottom: 0px;
-	margin-right: 8px;
+	margin-right: 30px;
 	color: @brcrm;
 	border-bottom: 1px solid transparent;
+	font-size: 14px;
+	font-weight: 300;
+
 
 	&:after {
 		content: '>';
 		position: absolute;
-		right: -8px;
-		top: 5px;
+		right: -21px;
+		top: 2px;
+		font-size: 14px;
 	}
 
-	&:hover {
-		border-bottom: 1px solid @brcrm;
+	&:before {
+		content: '';
+		position: absolute;
+		left: -2px;
+		bottom: -2px;
+		width: 0;
+		height: 1px;
+		background-color: @brcrmBorder;
+		transition: .3s;
 	}
+
+	&:hover:before {
+		width: 110%;
+
+	}
+}
+
+.sp-page .breadcrm a:hover:before,
+.dark-page .breadcrm a:hover:before {
+	border-bottom: 1px solid rgba(255, 255, 255, .7);
+	background-color: rgba(255, 255, 255, .7);
+}
+
+.sp-page .breadcrm a:hover:last-child,
+.dark-page .breadcrm a:hover:last-child {
+	color: #fff
 }
 
 .breadcrm a:last-child {
@@ -99,8 +183,13 @@ input {
 	}
 
 	&:hover {
-		color: unset;
+		color: @brcrm;
 		border-bottom: 0px;
+	}
+
+	&:hover:before {
+		// color: unset;
+		width: 0px;
 	}
 }
 
@@ -133,6 +222,8 @@ input {
 	}
 }
 
+.blog-wrapper,
+.media-wrapper,
 .page-wrapper {
 	max-width: 1920px;
 	margin-left: auto;

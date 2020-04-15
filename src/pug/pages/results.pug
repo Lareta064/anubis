@@ -1,0 +1,14 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-wrapper.page-wrapper-results
+		include ../sections/_header.pug
+		include ../sections/_result-banner.pug
+		include ../sections/_results-slogan.pug
+		include ../sections/_footer.pug
+
+
+
+block variables
+	-var title = "Статистика";
+	-var bodyClass = "dark-page"

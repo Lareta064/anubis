@@ -47,4 +47,14 @@
         sectionElement.classList.remove('overlay');
 
     });
+
+    window.addEventListener('resize', function () {
+
+        mobileMenuToggle.classList.remove('active');
+        bodyElement.classList.remove('noscroll');
+        sectionElement.classList.remove('overlay');
+        mobileMenu.classList.remove('active');
+
+
+    })
 })();

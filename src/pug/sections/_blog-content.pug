@@ -1,0 +1,67 @@
+mixin breadcrmb(args)
+	nav.breadcrm
+		each item in args
+			a(href= item.link) #{item.title}
+
+	
+section.blog
+	.container
+		.section-title
+			h1 Статьи
+			+breadcrmb([{link: 'index.html', title: 'Главная'},{link: '#!', title: 'Статьи'} ])
+		.section-content
+			.row
+				.order-md-last.col-md-5.col-xl-3.offset-xl-1
+					.blog-category
+						h4 Рубрики
+						nav.category-list
+							a(href="#") SEO-продвижение сайтов
+							a(href="#") Кейсы по продвижению и рекламе
+							a(href="#") Контектстная реклама
+							a(href="#") Разработка сайтов
+							a(href="#") Частые вопросы
+				.col-md-7.col-xl-8.order-md-first
+					article
+						h3  Настройка таргетированной рекламы в Инстаграм
+						.article-card
+							.article-card-text
+								h3 Как мы настраиваем рекламу в Инстаграм
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sapiente sint culpa labore animi placeat veniam nisi
+							button.card-btn Контекстная реклама сайтов
+						.article-info
+							.article-date
+								span.info-icon 
+									i.far.fa-calendar
+								span.info-value 27.04.2020
+							.article-comment 
+								span.info-icon
+									i.far.fa-comment-alt
+								span.info-value 60
+							.article-view
+								span.info-icon
+									i.far.fa-eye
+								span.info-value 1200
+						p.article-descrip Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus saepe ullam, facere quidem eos nostrum dolor nobis blanditiis ex fugit iusto quo eaque doloremque omnis accusantium sit ipsum nisi expedita?
+
+					article
+						h3  Настройка таргетированной рекламы в Инстаграм
+						.article-card
+							.article-card-text
+								h3 Как мы настраиваем рекламу в Инстаграм
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sapiente sint culpa labore animi placeat veniam nisi
+							button.card-btn Контекстная реклама сайтов
+						.article-info
+							.article-date
+								span.info-icon 
+									i.far.fa-calendar
+								span.info-value 27.04.2020
+							.article-comment 
+								span.info-icon
+									i.far.fa-comment-alt
+								span.info-value 60
+							.article-view
+								span.info-icon
+									i.far.fa-eye
+								span.info-value 1200
+						p.article-descrip Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus saepe ullam, facere quidem eos nostrum dolor nobis blanditiis ex fugit iusto quo eaque doloremque omnis accusantium sit ipsum nisi expedita?
+				

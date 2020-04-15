@@ -1,0 +1,49 @@
+.my-youtube {
+	min-height: 50vh;
+	margin-bottom: 40px;
+
+	@media(max-width:1439px) {
+		margin-bottom: 0;
+	}
+}
+
+.section-description {
+	padding-bottom: 55px;
+	color: #141516;
+	line-height: 30px;
+}
+
+.video {
+	position: relative;
+	display: block;
+	padding-bottom: 56.25%; //padding-top:25px;height:0;
+
+	@media(max-width:767px) {
+		&:first-child {
+			margin-bottom: 40px;
+		}
+
+		max-width:560px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+.media-wrapper .footer {
+	margin-top: 0;
+	background: url(../img/footer/blog-footer.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right top;
+	padding-top: 80px;
+
+}
