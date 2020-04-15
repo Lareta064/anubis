@@ -1,0 +1,15 @@
+mixin breadcrmb(args)
+	nav.breadcrm
+		each item in args
+			a(href= item.link) #{item.title}
+
+	
+section.bio
+	.container
+		.section-title
+			h1 Биография
+			+breadcrmb([{link: 'index.html', title: 'Главная'},{link: '#!', title: 'Биография'} ])
+		.bio-block
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, corporis? Asperiores, dolores reiciendis magni voluptate aperiam expedita culpa, reprehenderit iure saepe molestias debitis fuga illum adipisci odio vero impedit nulla! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, corporis? Asperiores, dolores reiciendis magni voluptate aperiam expedita culpa, reprehenderit iure saepe molestias debitis fuga illum adipisci odio vero impedit nulla!
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum nihil deleniti repellat harum ex laboriosam doloribus modi animi perspiciatis rerum iure quibusdam placeat, possimus atque iste repudiandae? Perferendis, quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, corporis? Asperiores, dolores reiciendis magni voluptate aperiam expedita culpa, reprehenderit iure saepe molestias debitis fuga illum adipisci odio vero impedit nulla!
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ipsa expedita qui omnis? Accusantium mollitia possimus laudantium nam dolore provident dicta earum quis, facere autem libero voluptate et ullam ex.
