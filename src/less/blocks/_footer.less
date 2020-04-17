@@ -1,8 +1,9 @@
 .footer {
 	background: url(../img/footer/stounBg.png);
+
 	background-position: bottom;
 	background-size: cover;
-	padding-top: 100px;
+	padding-top: 115px;
 	padding-bottom: 30px;
 	position: relative;
 	z-index: 2;
@@ -36,27 +37,33 @@
 
 .footer-nav {
 	display: block;
+	position: relative;
+	z-index: 10;
 
 	@media(max-width:1199px) {
 		display: none;
 	}
 }
 
-.footer-nav .submenu a {
-	position: relative;
-}
+
 
 .footer-nav li {
 	margin-right: 0;
 }
 
-.footer-content .footer-nav .submenu {
-	bottom: auto;
-	right: -2px;
-	top: 50%;
-	text-align: center;
-	transform: translate(100%, -50%);
-	width: 120px;
+.footer-nav li a {
+	font-size: 16px;
+	position: relative;
+	z-index: 10;
+}
+
+.footer-nav li:hover {
+	background-color: transparent;
+}
+
+.footer-nav li:hover a {
+	color: #c3c3c3;
+	background-color: transparent;
 }
 
 .social-block {
@@ -89,10 +96,15 @@
 	}
 }
 
+.sherdog-link:hover {
+	color: #c3c3c3;
+}
+
 .dev-company-info {
 	transition: .5s;
 	display: flex;
 	justify-content: flex-end;
+	flex-direction: column;
 
 	.company-icon {
 		width: 85px;
@@ -102,13 +114,31 @@
 		display: block;
 		font-size: 14px;
 
-		&:nth-child(2) {
-			text-decoration: underline;
-		}
-	}
 
-	&:hover {
-		opacity: .7;
+		&:nth-child(3) a {
+			position: relative;
+			display: inline;
+			margin-left: 5px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 100%;
+				bottom: 0px;
+				height: 1px;
+				background-color: #fff;
+				transition: .3s;
+			}
+
+			&:hover {
+				color: #cecece;
+			}
+
+			&:hover:after {
+				width: 0;
+			}
+		}
 	}
 
 	@media(max-width:767px) {

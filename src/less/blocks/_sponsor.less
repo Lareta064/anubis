@@ -28,30 +28,55 @@
 }
 
 .spons-logo {
-	a {
-		font-size: 16px;
-		line-height: 30px;
-		display: inline-block;
-		padding-top: 5px;
-		padding-left: 3px;
-		padding-right: 3px;
-		border-bottom: 1px solid #fff;
-		transition: 5s;
 
-		&:hover {
-			opacity: .5;
-		}
+	font-size: 16px;
+	line-height: 30px;
+	display: inline-block;
+	padding-top: 5px;
+	padding-left: 1px;
+	padding-right: 1px;
+	transition: .3s;
+
+	.logo-wrapper {
+		transition: ..s;
 	}
 
-	@media(max-width:767px) {
-		display: flex;
+	span {
+		position: relative;
+		padding-top: 8px;
+		display: inline-block;
+		transition: .3s;
 
-		.logo-wrapper {
-			display: none;
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			bottom: -1px;
+			height: 1px;
+			background-color: #fff;
+			transition: .3s;
 		}
-
 	}
 }
+
+.spons-logo:hover .logo-wrapper {
+	opacity: .8;
+}
+
+.spons-logo:hover span:after {
+	width: 0;
+}
+
+@media(max-width:767px) {
+	display: flex;
+
+	.logo-wrapper {
+		display: none;
+	}
+
+}
+
 
 .spons-info {
 	h2 {
@@ -130,11 +155,14 @@
 		background-color: #464646;
 		padding-left: 14px;
 		padding-right: 14px;
+		font-family: 'Segoe UI';
 		font-style: italic;
+		border: none;
+
 
 		&::placeholder {
 			text-transform: uppercase;
-			font-style: italic;
+
 		}
 	}
 }
@@ -154,4 +182,24 @@
 	font-size: 24px;
 	line-height: 30px;
 	margin-bottom: 30px;
+}
+
+.page-wrapper,
+.media-wrapper,
+.bio-wrapper,
+.spons-wrapper,
+.blog-wrapper {
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.feedback form {
+	@media(max-width:579px) {
+
+		max-width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

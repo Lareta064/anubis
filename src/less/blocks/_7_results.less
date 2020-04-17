@@ -1,8 +1,8 @@
 .result-banner {
-	background-image: url(../img/results/combat.png);
-	background-position: left 100px;
-	background-size: contain;
-	background-repeat: no-repeat;
+	// background-image: url(../img/results/combat.png);
+	// background-position: left 100px;
+	// background-size: contain;
+	// background-repeat: no-repeat;
 
 	@media(max-width:1439px) {
 		background-position: -100px 100px;
@@ -17,6 +17,7 @@
 
 		.banner-img {
 			border-bottom: 0px;
+			display: none;
 		}
 	}
 
@@ -42,12 +43,18 @@
 		width: 60%;
 		margin-left: auto;
 
+		@media(max-width:991px) {
+			width: 70%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		@media(max-width:767px) {
 			display: block;
-			width: 100%;
+
 			max-width: 380px;
 			margin-right: auto;
-			padding-top: 40px;
+			// padding-top: 40px;
 		}
 	}
 
@@ -108,6 +115,10 @@
 			top: 50%;
 			transform: translateY(-50%);
 			right: -76px;
+
+			@media(max-width:375px) {
+				display: none;
+			}
 		}
 	}
 
@@ -136,11 +147,42 @@
 			max-width: 380px;
 		}
 	}
+}
 
-	@media(min-width: 768px) {
-		.banner-img {
-			display: none;
+.banner.result-banner .banner-img {
+	left: 15%;
+	width: 55%;
+
+	max-width: 750px;
+
+	&.glitch {
+		top: auto;
+		transform: translate(-50%, 18%)
+	}
+
+	@media(max-width:1599px) {
+		max-width: 650px;
+
+		&.glitch {
+			top: auto;
+			transform: translate(-50%, 25%)
 		}
+	}
+
+	@media(max-width:1199px) {
+		max-width: 560px;
+
+		&.glitch {
+			top: auto;
+			transform: translate(-50%, 19%)
+		}
+	}
+
+}
+
+@media(max-width: 991px) {
+	.banner-img {
+		display: none;
 	}
 }
 
@@ -153,6 +195,7 @@
 
 	@media(max-width:767px) {
 		background-position: 0 -100px;
+		background-position: center;
 	}
 
 	.footer {

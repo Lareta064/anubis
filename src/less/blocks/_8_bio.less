@@ -1,4 +1,21 @@
 .bio-wrapper {
+	position: relative;
+	height: 100%;
+	background-image: url(../img/bio/bioBg.png);
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: center;
+
+	@media(min-width:1200px) {
+		footer.footer {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+	}
+
+
 	.bio {
 		position: relative;
 		background: url(../img/bio/photo.png);
@@ -32,7 +49,10 @@
 	}
 
 	.footer {
-		margin-top: -48px;
+		margin-top: -50px;
+		background-image: url(../img/bio/footerDark.png);
+		background-size: cover;
+		background-position: center;
 	}
 
 }
